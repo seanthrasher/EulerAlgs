@@ -1,2 +1,2 @@
 # EulerAlgs
-Solving Euler problems while learning JS.
+Solving Euler problems while learning JS (while getting doxxed).
