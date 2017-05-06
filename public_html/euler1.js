@@ -1,36 +1,17 @@
 function getResult() {
 
-  var prevNum = 1;
-  var prevPrevNum = 0;
-  var sum = 0;
-  var curNum = 1;
-  var buffer = 0;
+  var resultNum = 0;
 
-  while (curNum < 4000000) {
+  for (i = 3; i <= 999; i++) {
 
-    if (curNum % 2 == 0) {
-
-      sum += curNum;
-
+    if ((i % 3 == 0) || (i % 5 == 0)) {
+  
+      resultNum = resultNum + i;
+      
     }
 
-      console.log("Generation begins.");
-      console.log("Current number is " , curNum);
-
-      buffer = curNum;
-      console.log("Buffer set to " , curNum);
-
-      curNum += prevNum;
-      console.log("Current num set to the sum of " , prevNum , " and " , prevPrevNum);
-
-      prevPrevNum = prevNum;
-      console.log("prevPrevNum set to " , prevNum);
-
-      prevNum = buffer;
-      console.log("prevNum set to " , buffer);
-
-      console.log(curNum);
-
   }
-  document.getElementById("output").innerHTML = sum;
+
+  document.getElementById("output").innerHTML = resultNum;
+
 }
