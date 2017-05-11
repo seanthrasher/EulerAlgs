@@ -1,4 +1,5 @@
 function checkIfPrime(candidate) {
+/*
   var myNum = Math.ceil(candidate);
   var x = 2;
   
@@ -18,13 +19,32 @@ function checkIfPrime(candidate) {
 
 }
 
+*/
+
+  for(i = 2; i < myNum; i++) {
+
+    if (candidate % i >= 1) {
+
+      return true;
+    
+    } 
+    
+    else if (candidate % i == 0) {
+
+       return false;
+
+    }
+
+  }
+
+}
 
 function getResult() {
 
-  console.log("runnin");
+  //console.log("runnin");
 
   var running = true;
-  var bigNum = 100;
+  var bigNum = 600851475143;
   var x = Math.ceil(bigNum / 2);
   
   while (running == true) {
@@ -42,7 +62,6 @@ function getResult() {
       }
 
     }
-
     x -= 1;
   }
 }  
