@@ -20,20 +20,16 @@ function checkIfPrime(candidate) {
 }
 
 */
-
+  
   for(i = 2; i < myNum; i++) {
 
-    if (candidate % i >= 1) {
+    if (candidate % i == 0) {
 
-      return true;
-    
-    } 
-    
-    else if (candidate % i == 0) {
-
-       return false;
+      return false;
 
     }
+
+    return true;
 
   }
 
