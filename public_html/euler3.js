@@ -1,4 +1,5 @@
 function checkIfPrime(candidate) {
+/*
   var myNum = Math.ceil(candidate);
   var x = 2;
   
@@ -18,13 +19,32 @@ function checkIfPrime(candidate) {
 
 }
 
+*/
+  
+  for(i = 2; i < candidate; i++) {
+
+    if (candidate % i == 0) {
+
+      return  checkIfPrime(candidate / i);
+
+    }
+
+  }
+
+  return candidate;
+
+}
 
 function getResult() {
 
-  console.log("runnin");
+  //console.log("runnin");
+
+/*
+
+  This part of the code is what kept it from running efficiently. Only the above function is needed to rapidly and efficiently check for prime factors. Constantly bouncing between the two functions made the check lengthy and cumbersome.
 
   var running = true;
-  var bigNum = 100;
+  var bigNum = 600851475143;
   var x = Math.ceil(bigNum / 2);
   
   while (running == true) {
@@ -42,7 +62,13 @@ function getResult() {
       }
 
     }
-
     x -= 1;
   }
+
+*/
+
+  document.getElementById("output").innerHTML = checkIfPrime(600851475143);
+
 }  
+
+getResult();
