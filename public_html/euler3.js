@@ -21,23 +21,27 @@ function checkIfPrime(candidate) {
 
 */
   
-  for(i = 2; i < myNum; i++) {
+  for(i = 2; i < candidate; i++) {
 
     if (candidate % i == 0) {
 
-      return false;
+      return  checkIfPrime(candidate / i);
 
     }
 
-    return true;
-
   }
+
+  return candidate;
 
 }
 
 function getResult() {
 
   //console.log("runnin");
+
+/*
+
+  This part of the code is what kept it from running efficiently. Only the above function is needed to rapidly and efficiently check for prime factors. Constantly bouncing between the two functions made the check lengthy and cumbersome.
 
   var running = true;
   var bigNum = 600851475143;
@@ -60,4 +64,11 @@ function getResult() {
     }
     x -= 1;
   }
+
+*/
+
+  document.getElementById("output").innerHTML = checkIfPrime(600851475143);
+
 }  
+
+getResult();
